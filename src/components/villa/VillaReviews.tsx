@@ -5,27 +5,27 @@ import { motion } from 'framer-motion';
 const reviews = [
   {
     id: 1,
-    author: 'Sarah Johnson',
+    author: 'ณัฐวุฒิ',
     rating: 5,
     date: '2024-02-15',
-    comment: 'Absolutely stunning villa with amazing views. The staff was incredibly helpful and attentive.',
-    avatar: 'https://i.pravatar.cc/150?img=1'
+    comment: 'พูลวิลล่าสวย บรรยากาศดี เงียบสงบ เหมาะกับการพักผ่อนสุดๆ',
+    avatar: 'https://cdn.pixabay.com/photo/2016/09/22/09/32/face-1686740_1280.jpg'
   },
   {
     id: 2,
-    author: 'Michael Chen',
+    author: 'แพรว แพรว',
     rating: 4,
     date: '2024-02-10',
-    comment: 'Great location and beautiful property. The pool was perfect for our family.',
-    avatar: 'https://i.pravatar.cc/150?img=2'
+    comment: 'สนุกมากค่ะ วิลล่ามีครบทุกอย่าง สระว่ายน้ำสะอาด ถ่ายรูปสวยทุกมุม',
+    avatar: 'https://www.glamgirl.asia/wp-content/uploads/2017/09/118213420.jpg'
   },
   {
     id: 3,
-    author: 'Emma Wilson',
+    author: 'อริศรา',
     rating: 5,
     date: '2024-02-05',
-    comment: 'Exceeded our expectations in every way. Will definitely return!',
-    avatar: 'https://i.pravatar.cc/150?img=3'
+    comment: 'ห้องพักสะอาด กว้างขวาง บริการดีมาก กลับมาอีกแน่นอน!',
+    avatar: 'https://cdn.pixabay.com/photo/2017/04/22/09/41/chubby-model-2250928_1280.jpg'
   }
 ];
 

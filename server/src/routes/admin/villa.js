@@ -258,21 +258,12 @@ router.post('/slides', upload.villa.array('slideImages', 10), async (req, res) =
       return res.status(404).json({ message: 'Villa not found' });
     }
 
-    // Delete old slide images if they exist
-    if (villa.slideImages && villa.slideImages.length > 0) {
-      villa.slideImages.forEach(imagePath => {
-        if (!imagePath) return;
-        const oldPath = path.join(__dirname, '../../../server/uploads/villa', path.basename(imagePath));
-        console.log('Checking old image at:', oldPath);
-        if (fs.existsSync(oldPath)) {
-          console.log('Deleting old image');
-          fs.unlinkSync(oldPath);
-        }
-      });
+    // Append new slide image paths to existing ones
+    const newImagePaths = req.files.map(file => `${process.env.CLIENT_URL}/uploads/villa/${file.filename}`);
+    if (!villa.slideImages) {
+      villa.slideImages = [];
     }
-
-    // Update villa with new slide image paths
-    villa.slideImages = req.files.map(file => `${process.env.CLIENT_URL}/uploads/villa/${file.filename}`);
+    villa.slideImages = [...villa.slideImages, ...newImagePaths];
     console.log('Setting new slide image URLs:', villa.slideImages);
     await villa.save();
 
